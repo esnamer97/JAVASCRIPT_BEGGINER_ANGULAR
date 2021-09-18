@@ -1,0 +1,5 @@
+<nav class="header-nav" mat-tab-nav-bar [backgroundColor]="background">
+    <a mat-tab-link routerLink="/dashboard" (click)="activeLink = 0" [active]="activeLink == 0">Dashboard</a>
+    <a mat-tab-link routerLink="/javascriptproject" (click)="activeLink = 1" [active]="activeLink == 1">JavaScript Beginner Projects</a>
+</nav>
+<router-outlet></router-outlet>
