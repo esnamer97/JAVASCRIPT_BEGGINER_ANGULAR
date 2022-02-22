@@ -3,16 +3,18 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { ProjectsTemplate } from '../data/projectsTemplate';
+import { Project, RootObject } from '../data/projectsTemplate';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ProjectsServices {
   constructor(private http: HttpClient) { }
 
-  configUrl = 'my/url/stupid'
+  configUrl = 'http://localhost:8080/all'
 
   getProjects(){
-    return this.http.get<ProjectsTemplate>(this.configUrl).pipe(
+    return this.http.get<RootObject>(this.configUrl).pipe(
       retry(3),
       catchError(this.handleError)
     );

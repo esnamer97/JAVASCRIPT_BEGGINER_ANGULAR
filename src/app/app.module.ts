@@ -8,13 +8,18 @@ import { JavaScriptProjectComponent } from './java-script-project/java-script-pr
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ColorsProjectComponent } from './java-script-project/Projects/Colors_Project/colors-project/colors-project.component';
+import { GradientColorsComponent } from './java-script-project/Projects/Colors_Project/gradient-colors/gradient-colors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JavaScriptProjectComponent,
-    DashboardComponent
+    DashboardComponent,
+    ColorsProjectComponent,
+    GradientColorsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
